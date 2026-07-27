@@ -24,6 +24,9 @@
   .font-caption {
     font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 10, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
   }
+  .font-wide-medium {
+    font-variation-settings: 'wght' 477, 'wdth' 132, 'opsz' 77;
+  }
 }
 
 :root {
