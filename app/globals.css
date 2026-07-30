@@ -19,24 +19,41 @@
     font-variation-settings: 'wght' 600, 'wdth' 100, 'opsz' 48, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
   }
   .font-body {
-    font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 16, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+    font-variation-settings: 'wght' 300, 'wdth' 100, 'opsz' 16, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+  }
+  .font-body-wide {
+    font-variation-settings: 'wght' 300, 'wdth' 110, 'opsz' 16, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+  }
+  .font-body-wider{
+    font-variation-settings: 'wght' 300, 'wdth' 115, 'opsz' 17, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
   }
   .font-caption {
-    font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 10, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+    font-variation-settings: 'wght' 400, 'wdth' 120, 'opsz' 10, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
   }
   .font-wide-medium {
     font-variation-settings: 'wght' 477, 'wdth' 132, 'opsz' 77;
+  }
+  .font-head{
+    font-variation-settings: 'wght' 900, 'wdth' 140, 'opsz' 48, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+  }
+  .font-subheadings{
+    font-variation-settings: 'wght' 600, 'wdth' 132, 'opsz' 77, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+  }
+  .font-headings{
+    font-variation-settings: 'wght' 800, 'wdth' 132, 'opsz' 77, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
   }
 }
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #FF9500;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-primary: "Google Sans Flex", var(--font-sans);
@@ -47,6 +64,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #FF9500;
   }
 }
 
