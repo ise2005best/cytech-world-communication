@@ -169,7 +169,7 @@ export default function Home() {
           setting up a production space, Cytech can guide the process from order
           to installation.
         </p>
-        <Button href="/contact-us">Contact us</Button>
+        <Button href="/services">Services</Button>
       </div>
 
       <div className="md:mt-10  flex flex-col mx-6 py-10 max-w-6xl gap-6 md:mx-36 md:py-14">

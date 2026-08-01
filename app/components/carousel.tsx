@@ -135,8 +135,8 @@ const Carousel = ({ slides = defaultSlides }: { slides?: CarouselSlide[] }) => {
           </div>
         </div>
 
-        <div className="absolute inset-x-0 top-1/2 -translate-y-1/4 md:bg-linear-to-t from-black/90 via-black/50 to-transparent px-6 pb-6 pt-6 md:top-auto md:bottom-0 md:translate-y-0 md:px-16 md:pb-8 md:pt-20">
-          <h1 className="font-primary font-head uppercase md:text-[80px] md:wrap-break-word text-[40px] max-w-3xl font-semibold text-white ">
+        <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/4 md:bg-linear-to-t from-black/90 via-black/50 to-transparent px-6 pb-6 pt-6 md:top-auto md:bottom-0 md:translate-y-0 md:px-16 md:pb-8 md:pt-20">
+          <h1 className="font-primary font-head uppercase md:text-[80px] wrap-break-word text-[38px] lg:max-w-4xl font-semibold text-white ">
             {activeSlide.title}
           </h1>
           <p className="font-primary font-caption md:text-sm text-xs text-white">
@@ -145,7 +145,7 @@ const Carousel = ({ slides = defaultSlides }: { slides?: CarouselSlide[] }) => {
           </p>
 
           <div className="mt-48 flex items-center justify-center md:mt-6 md:justify-between">
-            <div className="flex items-center gap-2">
+            <div className="pointer-events-auto flex items-center gap-2">
               {slides.map((slide, index) => (
                 <button
                   key={slide.src}
@@ -160,7 +160,7 @@ const Carousel = ({ slides = defaultSlides }: { slides?: CarouselSlide[] }) => {
               ))}
             </div>
 
-            <div className="flex max-md:hidden  items-center gap-32">
+            <div className="pointer-events-auto flex max-md:hidden  items-center gap-32">
               <button
                 onClick={scrollPrev}
                 aria-label="Previous slide"

@@ -38,7 +38,7 @@ const Navbar = () => {
           className="order-1 h-16 w-auto"
         />
 
-        <div className="order-3 flex w-full items-center mt-4 md:mt-0 justify-center lg:gap-10 gap-16 md:order-2 md:w-auto md:justify-start">
+        <div className="order-3 flex w-full items-center mt-4 md:mt-0 justify-center gap-10 md:order-2 md:w-auto md:justify-start">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
