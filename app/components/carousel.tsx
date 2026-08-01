@@ -4,7 +4,7 @@ import { useCallback, useSyncExternalStore } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CiLocationOn } from "react-icons/ci";
 
 export type CarouselSlide = {
@@ -115,9 +115,9 @@ const Carousel = ({ slides = defaultSlides }: { slides?: CarouselSlide[] }) => {
   const activeSlide = slides[selectedIndex];
 
   return (
-    <div className="h-[90vh] w-full">
-      <div className="relative h-full overflow-hidden">
-        <div className="h-full overflow-hidden" ref={emblaRef}>
+    <div className="lg:h-screen h-[90vh] lg:px-5 lg:py-10 py-5 rounded-full w-full">
+      <div className="relative h-full overflow-hidden lg:rounded-2xl lg:border lg:border-none">
+        <div className="h-full overflow-hidden opacity-90 bg-[#1E1E1E]/37" ref={emblaRef}>
           <div className="flex h-full">
             {slides.map((slide) => (
               <div className="relative h-full min-w-0 flex-[0_0_100%] " key={slide.src}>
@@ -127,7 +127,7 @@ const Carousel = ({ slides = defaultSlides }: { slides?: CarouselSlide[] }) => {
                     alt={slide.alt}
                     fill
                     sizes="100vw"
-                    className="object-cover"
+                    className="object-cover  "
                   />
                 </div>
               </div>
@@ -136,7 +136,7 @@ const Carousel = ({ slides = defaultSlides }: { slides?: CarouselSlide[] }) => {
         </div>
 
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/4 md:bg-linear-to-t from-black/90 via-black/50 to-transparent px-6 pb-6 pt-6 md:top-auto md:bottom-0 md:translate-y-0 md:px-16 md:pb-8 md:pt-20">
-          <h1 className="font-primary font-head uppercase md:text-[80px] text-[40px] max-w-2xl font-semibold text-white ">
+          <h1 className="font-primary font-head uppercase md:text-[80px] md:wrap-break-word text-[40px] max-w-3xl font-semibold text-white ">
             {activeSlide.title}
           </h1>
           <p className="font-primary font-caption md:text-sm text-xs text-white">
@@ -160,20 +160,20 @@ const Carousel = ({ slides = defaultSlides }: { slides?: CarouselSlide[] }) => {
               ))}
             </div>
 
-            <div className="flex max-md:hidden  items-center gap-28">
+            <div className="flex max-md:hidden  items-center gap-32">
               <button
                 onClick={scrollPrev}
                 aria-label="Previous slide"
                 className="flex h-10 w-10 items-center justify-center text-white transition duration-300"
               >
-                <FaChevronLeft size={20} />
+                <ChevronLeft size={46} strokeWidth={1.5} />
               </button>
               <button
                 onClick={scrollNext}
                 aria-label="Next slide"
                 className="flex h-10 w-10 items-center justify-center rounded-full text-white transition duration-300 hover:bg-white/40"
               >
-                <FaChevronRight size={20} />
+                <ChevronRight size={46} strokeWidth={1.5} />
               </button>
             </div>
           </div>

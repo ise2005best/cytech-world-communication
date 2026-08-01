@@ -7,12 +7,12 @@ const Footer = () => {
       <div className="bg-[#141414] flex flex-row gap-10 px-2 py-10 md:px-8">
         <div className="flex w-1/2 flex-col gap-5 border-r border-dashed border-[#474747] md:px-8 px-4 md:w-2/5">
           <Image
-            src="/logos/BLACK_LOGO.png"
+            src="/logos/WHITE_LOGO.png"
             alt="Logo"
             width={853}
             height={466}
             loading="eager"
-            className="h-20 md:w-auto w-28 xl:h-64 lg:h-56 md:h-44"
+            className="h-20 md:w-auto w-28 xl:h-64 lg:h-56 md:h-44 mix-blend-overlay" 
           />
           <div className="flex flex-col gap-2 mt-6">
             <p className="font-tertiary capitalize text-sm font-light text-[#474747]">

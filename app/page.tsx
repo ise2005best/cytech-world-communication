@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center mx-6 gap-6 mb-10 md:flex-row md:ml-12 md:mr-0">
+      <div className="flex flex-col justify-center mx-6 gap-6 md:mb-24 mb-10 md:flex-row md:ml-12 md:mr-0">
         <div className="bg-[#F0EFEF] pl-6 pr-6 py-8 w-full flex flex-col gap-6 rounded-2xl max-w-2xl md:pl-12 md:pr-0 md:py-14 md:w-[40%]">
           <h4 className="font-primary font-subheadings text-2xl max-w-md uppercase text-black">
             Built for Every Scale of Event
@@ -158,7 +158,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col mx-6 py-10 max-w-6xl gap-6 md:mx-36 md:py-14">
+      <div className="flex flex-col mx-6 py-10 md:mt-20 mt-10 max-w-6xl gap-6 md:mx-36 md:py-14">
         <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-[40px]">
           Equipment Distribution & Installation
         </h3>
@@ -203,9 +203,9 @@ export default function Home() {
               <p className="font-primary font-body md:text-xl text-base text-[#949494]">
                 {equipment.description}
               </p>
-              <div className="text-white max-md:hidden transition flex justify-center items-center duration-300 group-hover:text-primary">
+              {/* <div className="text-white max-md:hidden transition flex justify-center items-center duration-300 group-hover:text-primary">
                 {equipment.icon}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

@@ -28,7 +28,7 @@ const Navbar = () => {
         isScrolled ? "bg-transparent backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="flex flex-wrap items-center justify-between gap-y-4 py-10 px-8 md:flex-nowrap">
+      <div className="flex flex-wrap items-center justify-between gap-y-4 md:py-12 md:px-14 py-14 px-6 md:flex-nowrap">
         <Image
           src="/logos/WHITE_LOGO.png"
           alt="Logo"
@@ -38,7 +38,7 @@ const Navbar = () => {
           className="order-1 h-16 w-auto"
         />
 
-        <div className="order-3 flex w-full items-center mt-4 md:mt-0 justify-center gap-10 md:order-2 md:w-auto md:justify-start">
+        <div className="order-3 flex w-full items-center mt-4 md:mt-0 justify-center lg:gap-10 gap-16 md:order-2 md:w-auto md:justify-start">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
