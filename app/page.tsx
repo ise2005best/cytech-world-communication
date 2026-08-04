@@ -1,3 +1,4 @@
+"use client";
 import Carousel from "./components/carousel";
 import Button from "./components/button";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import { TbAtom } from "react-icons/tb";
 import { PiSnowflakeThin, PiSwatchesThin } from "react-icons/pi";
 import { VscBroadcast } from "react-icons/vsc";
 import { LuSlidersHorizontal } from "react-icons/lu";
+import { motion } from "motion/react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { X } from "lucide-react";
 interface PremiumEquipment {
@@ -71,9 +73,15 @@ export default function Home() {
       <Carousel />
       <div className="flex flex-col justify-center items-start py-12 mx-6 md:py-32 md:mx-36">
         <div className="flex flex-col items-start gap-6 md:gap-12">
-          <h3 className="font-primary font-head uppercase text-4xl md:text-7xl max-w-4xl font-semibold text-white ">
+          <motion.h3
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="font-primary font-head uppercase text-4xl md:text-7xl max-w-4xl font-semibold text-white "
+          >
             Premium Event Solutions
-          </h3>
+          </motion.h3>
 
           <Button href="/about" variant="outline">
             About us
@@ -91,7 +99,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center mx-6 gap-6 md:mb-24 mb-10 md:flex-row md:ml-12 md:mr-0">
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex flex-col justify-center mx-6 gap-6 md:mb-24 mb-10 md:flex-row md:ml-12 md:mr-0"
+      >
         <div className="bg-[#F0EFEF] pl-6 pr-6 py-8 w-full flex flex-col gap-6 rounded-2xl max-w-2xl md:pl-12 md:pr-0 md:py-14 md:w-[40%]">
           <h4 className="font-primary font-subheadings text-2xl max-w-md uppercase text-black">
             Built for Every Scale of Event
@@ -125,7 +139,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
       <div className="flex flex-col justify-center items-start gap-6 py-10 bg-[#ACACAC] md:gap-10 md:py-14">
         <div className="flex flex-col mx-6 gap-6 md:mx-36">
           <h4 className="font-primary font-headings text-2xl uppercase text-white md:text-4xl">
@@ -140,25 +154,33 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex w-full flex-row flex-nowrap items-center justify-start gap-6 overflow-x-auto px-6 md:justify-center md:gap-12 md:px-0">
-          {trustedPartners.map((partner) => (
-            <div
-              key={partner.alt}
-              className="flex h-28 shrink-0 items-center justify-center md:h-24 w-32"
-            >
-              <Image
-                src={partner.src}
-                alt={partner.alt}
-                width={2160}
-                height={270}
-                className="md:h-fit h-full w-full object-contain "
-              />
-            </div>
-          ))}
+        <div className="w-full overflow-hidden">
+          <div className="animate-marquee flex w-max flex-row flex-nowrap items-center gap-6 hover:[animation-play-state:paused] md:gap-12">
+            {[...trustedPartners, ...trustedPartners].map((partner, index) => (
+              <div
+                key={`${partner.alt}-${index}`}
+                className="flex h-28 shrink-0 items-center justify-center md:h-24 w-32"
+              >
+                <Image
+                  src={partner.src}
+                  alt={partner.alt}
+                  width={2160}
+                  height={270}
+                  className="md:h-fit h-full w-full object-contain "
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-col mx-6 py-10 md:mt-20 mt-10 max-w-6xl gap-6 md:mx-36 md:py-14">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex flex-col mx-6 py-10 md:mt-20 mt-10 max-w-6xl gap-6 md:mx-36 md:py-14"
+      >
         <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-[40px]">
           Equipment Distribution & Installation
         </h3>
@@ -170,9 +192,15 @@ export default function Home() {
           to installation.
         </p>
         <Button href="/services">Services</Button>
-      </div>
+      </motion.div>
 
-      <div className="md:mt-10  flex flex-col mx-6 py-10 max-w-6xl gap-6 md:mx-36 md:py-14">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="md:mt-10  flex flex-col mx-6 py-10 max-w-6xl gap-6 md:mx-36 md:py-14"
+      >
         <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-[40px]">
           Premium Equipments
         </h3>
@@ -209,7 +237,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       <div className="py-10 bg-[#ACACAC] md:py-14">
         <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 md:gap-10">

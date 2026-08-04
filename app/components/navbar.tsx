@@ -29,7 +29,8 @@ const Navbar = () => {
       }`}
     >
       <div className="flex flex-wrap items-center justify-between gap-y-4 md:py-12 md:px-14 py-14 px-6 md:flex-nowrap">
-        <Image
+        <Link href="/">
+         <Image
           src="/logos/WHITE_LOGO.png"
           alt="Logo"
           width={853}
@@ -37,7 +38,7 @@ const Navbar = () => {
           loading="eager"
           className="order-1 h-16 w-auto"
         />
-
+        </Link>
         <div className="order-3 flex w-full items-center mt-4 md:mt-0 justify-center gap-10 md:order-2 md:w-auto md:justify-start">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;

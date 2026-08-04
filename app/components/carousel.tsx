@@ -36,7 +36,7 @@ const defaultSlides: CarouselSlide[] = [
   {
     src: "/assets/carousel-images/AFRIMA-MUSIC-VILLAGE-CONCERT-23-2048x1365 2.png",
     alt: "AFRIMA Music Village Concert",
-    title: "AFRIMA Awards/Village",
+    title: "AFRIMA",
     location: "Lagos, Nigeria",
   },
   {
@@ -127,6 +127,7 @@ const Carousel = ({ slides = defaultSlides }: { slides?: CarouselSlide[] }) => {
                     alt={slide.alt}
                     fill
                     sizes="100vw"
+                    loading="eager"
                     className="object-cover  "
                   />
                 </div>

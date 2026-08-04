@@ -16,7 +16,7 @@
 
 @layer utilities {
   .font-display {
-    font-variation-settings: 'wght' 600, 'wdth' 100, 'opsz' 48, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+    font-variation-settings: 'wght' 600, 'wdth' 110, 'opsz' 48, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
   }
   .font-body {
     font-variation-settings: 'wght' 300, 'wdth' 100, 'opsz' 16, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
@@ -26,6 +26,12 @@
   }
   .font-body-wider{
     font-variation-settings: 'wght' 300, 'wdth' 115, 'opsz' 17, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+  }
+  .font-desktop-body {
+    font-variation-settings: 'wght' 400, 'wdth' 115, 'opsz' 77, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+  }
+  .font-header-wide {
+    font-variation-settings: 'wdth' 132;
   }
   .font-caption {
     font-variation-settings: 'wght' 400, 'wdth' 120, 'opsz' 10, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
@@ -41,6 +47,18 @@
   }
   .font-headings{
     font-variation-settings: 'wght' 800, 'wdth' 132, 'opsz' 77, 'GRAD' 0, 'ROND' 0, 'slnt' 0;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
   }
 }
 
