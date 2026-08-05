@@ -22,7 +22,7 @@ const featuredEvents = [
 const AboutUs = () => {
   return (
     <div>
-      <div className="flex flex-col justify-center items-start py-12 md:mt-28 mt-52 mx-6 md:py-32 md:mx-36 max-w-6xl">
+      <div className="flex flex-col justify-center items-start py-12 md:mt-28 mt-52 mx-6 md:py-32 md:mx-36 max-w-6xl xl:mx-auto">
         <h3 className="font-primary font-head uppercase text-[32px] md:text-7xl max-w-4xl font-semibold text-white">
           The Engine Behind Every Stage
         </h3>
@@ -93,7 +93,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="py-10 bg-[#ACACAC] md:py-14">
-        <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 md:gap-10">
+        <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 md:gap-10 xl:mx-auto">
           <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-3xl">
             Explore our Portfolio
           </h3>
