@@ -65,7 +65,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:gap-10 gap-6 mt-16 md:mt-28 items-center justify-center mx-auto">
+        <div className="flex w-full flex-col md:gap-10 gap-6 mt-16 md:mt-28 items-center justify-center mx-auto">
           <p className="font-primary font-headings uppercase md:text-[40px] text-2xl text-white">
             warehouse catalogue
           </p>
@@ -74,13 +74,13 @@ const Services = () => {
             helps us understand what you are looking for and recommend the right
             production support where needed.
           </p>
-          <div className="w-full ">
+          <div className="w-full md:max-w-3xl xl:max-w-4xl">
             <CatalogueRequestForm />
           </div>
         </div>
       </div>
       <div className="py-10 bg-[#ACACAC] md:py-14">
-        <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 md:gap-10 xl:mx-auto">
+        <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 md:gap-10">
           <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-3xl">
             Work With Us
           </h3>

@@ -10,7 +10,6 @@ import { LuSlidersHorizontal } from "react-icons/lu";
 import { motion } from "motion/react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { X } from "lucide-react";
-import Link from "next/link";
 interface PremiumEquipment {
   heading: string;
   description: string;
@@ -72,7 +71,7 @@ export default function Home() {
   return (
     <div className="bg-[#0F0F0F]">
       <Carousel />
-      <div className="flex flex-col justify-center items-start py-12 mx-6 max-w-6xl md:py-32 md:mx-36 xl:mx-auto">
+      <div className="flex flex-col justify-center items-start py-12 mx-6 md:py-32 md:mx-36">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -142,7 +141,7 @@ export default function Home() {
         </div>
       </motion.div>
       <div className="flex flex-col justify-center items-start gap-6 py-10 bg-[#ACACAC] md:gap-10 md:py-14">
-        <div className="flex flex-col mx-6 max-w-6xl gap-6 md:mx-36 xl:mx-auto">
+        <div className="flex flex-col mx-6 gap-6 md:mx-36">
           <h4 className="font-primary font-headings text-2xl uppercase text-white md:text-4xl">
             Trusted Global Partners
           </h4>
@@ -180,12 +179,12 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col mx-6 py-10 md:mt-20 mt-10 max-w-6xl gap-6 md:mx-36 md:py-14 xl:mx-auto"
+        className="flex flex-col items-start mx-6 py-10 md:mt-20 mt-10 gap-6 md:mx-auto md:py-14 lg:max-w-7xl xl:max-w-4/5"
       >
-        <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-[40px]">
+        <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-[40px] max-w-4xl">
           Equipment Distribution & Installation
         </h3>
-        <p className="font-primary font-body-wide text-base text-white md:text-2xl">
+        <p className="font-primary font-body-wide text-base text-white md:text-2xl max-w-6xl">
           As distributors of professional event equipment, we help clients
           source, purchase, and install systems from our trusted global
           partners. Whether you are building a venue, upgrading a church, or
@@ -200,7 +199,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: "some" }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="md:mt-10 flex flex-col mx-6 py-10 max-w-6xl gap-6 md:mx-36 md:py-14 xl:mx-auto"
+        className="md:mt-10 flex flex-col mx-6 py-10 gap-6 md:mx-auto md:py-14 lg:max-w-7xl xl:max-w-4/5"
       >
         <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-[40px]">
           Premium Equipments
@@ -214,9 +213,9 @@ export default function Home() {
           {premiumEquipments.map((equipment) => (
             <div
               key={equipment.heading}
-              className="group flex w-full flex-col gap-4 bg-black rounded-xl px-3 py-10 transition duration-300 md:max-w-135"
+              className="group flex w-full flex-col gap-4 bg-black rounded-xl px-3 py-10 transition duration-300 md:max-w-135 lg:max-w-4xl"
             >
-              <Link className="flex flex-row items-center justify-between border-b border-dashed border-gray-500 pb-4" href="/services">
+              <div className="flex flex-row items-center justify-between border-b border-dashed border-gray-500 pb-4">
                 <div className="flex flex-row gap-1 items-center">
                   <X className="w-6 h-6 max-md:hidden text-white transition duration-300 group-hover:text-primary" />
                   <h4 className="font-primary font-subheadings md:text-2xl text-xl uppercase text-white transition duration-300 group-hover:text-primary">
@@ -227,11 +226,11 @@ export default function Home() {
                 <div className="flex md:h-5 md:w-5 w-7 h-7 shrink-0 items-center justify-center rounded-sm border border-white transition duration-300 group-hover:border-primary">
                   <MdOutlineArrowOutward className="md:w-4 md:h-4 w-6 h-6 text-white transition duration-300 group-hover:text-primary" />
                 </div>
-              </Link>
+              </div>
 
               <p className="font-primary font-body md:text-xl text-base text-[#949494]">
                 {equipment.description}
-              </p>
+n              </p>
               {/* <div className="text-white max-md:hidden transition flex justify-center items-center duration-300 group-hover:text-primary">
                 {equipment.icon}
               </div> */}
@@ -241,7 +240,7 @@ export default function Home() {
       </motion.div>
 
       <div className="py-10 bg-[#ACACAC] md:py-14">
-        <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 ">
+        <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 md:gap-10">
           <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-[40px]">
             Work With us
           </h3>

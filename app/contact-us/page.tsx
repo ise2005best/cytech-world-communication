@@ -4,7 +4,7 @@ import ServiceRequestForm from "../components/service-request-form";
 const ContactUs = () => {
   return (
     <div>
-      <div className="flex flex-col justify-center items-start py-12 md:mt-28 mt-52 mx-6 md:py-32 md:mx-36 max-w-6xl xl:mx-auto">
+      <div className="flex flex-col justify-center items-start py-12 md:mt-28 mt-52 mx-6 md:py-32 md:mx-36 max-w-6xl">
         <h1 className="font-primary font-head uppercase text-[32px] md:text-7xl max-w-4xl font-semibold text-white">
           Work With Us
         </h1>
@@ -27,7 +27,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="py-10 bg-[#ACACAC] md:py-14">
-        <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 md:gap-10 xl:mx-auto">
+        <div className="mx-6 flex flex-col max-w-5xl gap-6 md:mx-36 md:gap-10">
           <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-3xl">
             Explore Our Portfolio
           </h3>
