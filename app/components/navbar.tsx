@@ -61,7 +61,11 @@ const Navbar = () => {
         </div>
 
         <div className="order-2 md:order-3">
-          <Button href="/contact-us" variant="outline">
+          <Button
+            href="/contact-us"
+            variant="outline"
+            isActive={pathname === "/contact-us"}
+          >
             Contact us
           </Button>
         </div>

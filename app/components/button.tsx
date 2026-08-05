@@ -8,6 +8,7 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: ButtonVariant;
   className?: string;
+  isActive?: boolean;
 };
 
 const baseStyles =
@@ -19,11 +20,22 @@ const variantStyles: Record<ButtonVariant, string> = {
     "bg-[#1E1E1E]/20 border border-gray-300 text-white hover:border-primary hover:text-primary",
 };
 
-const Button = ({ href, children, variant = "dark", className = "" }: ButtonProps) => {
+const activeOutlineStyles = "bg-[#1E1E1E]/20 border border-primary text-primary";
+
+const Button = ({
+  href,
+  children,
+  variant = "dark",
+  className = "",
+  isActive = false,
+}: ButtonProps) => {
+  const variantClassName =
+    variant === "outline" && isActive ? activeOutlineStyles : variantStyles[variant];
+
   return (
     <Link
       href={href}
-      className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+      className={`${baseStyles} ${variantClassName} ${className}`}
     >
       {children}
       {variant === "dark" && (

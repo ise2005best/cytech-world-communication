@@ -197,7 +197,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="md:mt-10  flex flex-col mx-6 py-10 max-w-6xl gap-6 md:mx-36 md:py-14"
       >
