@@ -69,12 +69,14 @@ const Services = () => {
           <p className="font-primary font-headings uppercase md:text-[40px] text-2xl text-white">
             warehouse catalogue
           </p>
-          <p className="font-primary font-desktop-body md:text-2xl text-sm text-white max-w-5xl ">
+          <p className="font-primary font-desktop-body md:text-2xl text-sm text-white max-w-4xl ">
             Fill in your details to access our full equipment catalogue. This
             helps us understand what you are looking for and recommend the right
             production support where needed.
           </p>
-          <CatalogueRequestForm />
+          <div className="w-full ">
+            <CatalogueRequestForm />
+          </div>
         </div>
       </div>
       <div className="py-10 bg-[#ACACAC] md:py-14">

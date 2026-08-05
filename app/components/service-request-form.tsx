@@ -7,13 +7,13 @@ import { z } from "zod";
 import { ChevronDown } from "lucide-react";
 
 const serviceCategories = [
-  "Technical Production Support",
-  // "Equipment Rental",
-  // "Equipment Distribution & Installation",
-  // "Full Production Execution",
-  // "Production Planning",
-  // "Live Event Operation",
-  // "Training & Technical Development",
+  "Technical Support",
+  "Equipment Rental",
+  "Equipment Installation & Distribution ",
+  "Production Planning & Execution",
+  "Training & Technical Development",
+  "Live Event Operation",
+  "Other",
 ] as const;
 
 const serviceRequestSchema = z.object({

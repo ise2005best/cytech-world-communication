@@ -72,16 +72,16 @@ export default function Home() {
     <div className="bg-[#0F0F0F]">
       <Carousel />
       <div className="flex flex-col justify-center items-start py-12 mx-6 md:py-32 md:mx-36">
-        <div className="flex flex-col items-start gap-6 md:gap-12">
-          <motion.h3
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="font-primary font-head uppercase text-4xl md:text-7xl max-w-4xl font-semibold text-white "
-          >
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col items-start gap-6 md:gap-12"
+        >
+          <h3 className="font-primary font-head uppercase text-4xl md:text-7xl max-w-4xl font-semibold text-white ">
             Premium Event Solutions
-          </motion.h3>
+          </h3>
 
           <Button href="/about" variant="outline">
             About us
@@ -97,7 +97,7 @@ export default function Home() {
               hands-on experience in live events.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
       <motion.div
         initial={{ opacity: 0, x: -60 }}
@@ -197,8 +197,8 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: "some" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
         className="md:mt-10  flex flex-col mx-6 py-10 max-w-6xl gap-6 md:mx-36 md:py-14"
       >
         <h3 className="font-primary font-headings text-2xl uppercase text-white md:text-[40px]">

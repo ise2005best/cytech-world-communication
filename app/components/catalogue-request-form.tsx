@@ -7,12 +7,10 @@ import { z } from "zod";
 import { ChevronDown } from "lucide-react";
 
 const equipmentCategories = [
-  "Backline Equipment",
-  // "Line Array Speakers",
-  // "Stage Lighting Systems",
-  // "Stage & Truss Structures",
-  // "Digital Mixing Consoles",
-  // "Stage Effects Equipment",
+  "Sound Systems",
+  "Lighting Equipment & Fixtures",
+  "Staging & Structures",
+  "Stage & Scaffolding Equipments",
 ] as const;
 
 const catalogueRequestSchema = z.object({
