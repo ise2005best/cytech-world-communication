@@ -22,11 +22,11 @@ const featuredEvents = [
 const AboutUs = () => {
   return (
     <div>
-      <div className="flex flex-col justify-center items-start py-12 mt-28 mx-6 md:py-32 md:mx-36 max-w-6xl">
-        <h3 className="font-primary font-head uppercase text-4xl md:text-7xl max-w-4xl font-semibold text-white">
+      <div className="flex flex-col justify-center items-start py-12 md:mt-28 mt-52 mx-6 md:py-32 md:mx-36 max-w-6xl">
+        <h3 className="font-primary font-head uppercase text-[32px] md:text-7xl max-w-4xl font-semibold text-white">
           The Engine Behind Every Stage
         </h3>
-        <div className="flex flex-col gap-6 font-primary font-desktop-body md:text-2xl text-base text-white mt-6 md:mt-12">
+        <div className="flex flex-col gap-6 font-primary font-desktop-body md:text-2xl text-sm text-white mt-6 md:mt-12">
           <p>
             Founded in 2003 by Cyril Atie Utomoibor, Cytech World Communication
             has grown into one of the most trusted names in event production.
@@ -58,7 +58,7 @@ const AboutUs = () => {
             </Link>
           ))}
         </div>
-        <p className="font-primary font-desktop-body md:text-2xl text-base text-white mt-6 md:mt-12">
+        <p className="font-primary font-desktop-body md:text-2xl text-sm text-white mt-6 md:mt-12">
           And several major government, cultural, faith-based, and entertainment
           productions, our work continues to stand where the biggest moments
           happen.
@@ -67,7 +67,7 @@ const AboutUs = () => {
           <p className="font-primary font-header-wide font-black uppercase md:text-[40px] text-2xl text-white mt-6 md:mt-12">
             Our Brand Ecosystem
           </p>
-          <div className="flex flex-col gap-3 font-primary font-desktop-body md:text-2xl text-base text-white">
+          <div className="flex flex-col gap-3 font-primary font-desktop-body md:text-2xl text-sm text-white">
             <p>
               We continue to expand beyond event production through brands built
               to serve the future of entertainment.
@@ -87,7 +87,7 @@ const AboutUs = () => {
               width={853}
               height={466}
               loading="eager"
-              className="h-20 w-fit"
+              className="md:h-20 h-14 w-fit"
             />
           </div>
         </div>

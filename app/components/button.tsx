@@ -11,7 +11,7 @@ type ButtonProps = {
 };
 
 const baseStyles =
-  "group inline-flex w-fit items-center uppercase font-secondary text-sm py-2.5 px-5 rounded-4xl transition duration-300";
+  "group inline-flex w-fit items-center uppercase font-secondary md:text-sm text-xs py-2.5 px-5 rounded-4xl transition duration-300";
 
 const variantStyles: Record<ButtonVariant, string> = {
   dark: "bg-[#1E1E1E] text-primary md:text-white md:hover:text-primary",
