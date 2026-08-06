@@ -3,30 +3,12 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { ChevronDown } from "lucide-react";
-
-const serviceCategories = [
-  "Technical Support",
-  "Equipment Rental",
-  "Equipment Installation & Distribution ",
-  "Production Planning & Execution",
-  "Training & Technical Development",
-  "Live Event Operation",
-  "Other",
-] as const;
-
-const serviceRequestSchema = z.object({
-  fullName: z.string().min(2, "Enter your full name"),
-  email: z.email("Enter a valid email address"),
-  phone: z.string().min(7, "Enter a valid phone number"),
-  serviceCategory: z.enum(serviceCategories, {
-    message: "Select a service category",
-  }),
-  details: z.string().min(10, "Tell us a bit more about what you need"),
-});
-
-type ServiceRequestValues = z.infer<typeof serviceRequestSchema>;
+import {
+  serviceCategories,
+  serviceRequestSchema,
+  type ServiceRequestValues,
+} from "@/app/lib/schemas/service-request";
 
 const fieldClassName =
   "w-full rounded-md border border-white bg-transparent px-4 pb-2 pt-6 font-secondary text-sm text-white outline-none transition duration-300 focus:border-primary";
@@ -36,6 +18,7 @@ const errorClassName = "font-secondary text-xs text-primary";
 
 const ServiceRequestForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -47,7 +30,18 @@ const ServiceRequestForm = () => {
   });
 
   const onSubmit = async (values: ServiceRequestValues) => {
-    console.log(values);
+    setSubmitError(null);
+    const response = await fetch("/api/resend/contact-us", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values),
+    });
+
+    if (!response.ok) {
+      setSubmitError("Something went wrong. Please try again.");
+      return;
+    }
+
     setSubmitted(true);
     reset();
   };
@@ -176,7 +170,8 @@ const ServiceRequestForm = () => {
         )}
       </div>
 
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-3">
+        {submitError && <p className={errorClassName}>{submitError}</p>}
         <button
           type="submit"
           disabled={isSubmitting}
