@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Button from "../components/button";
 import CatalogueRequestForm from "../components/catalogue-request-form";
 import { X } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "From equipment distribution and installation to full production execution and live event operation — explore the technical systems and support Cytech World Communication brings to every event.",
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 const offerings = [
   "Technical Production Support",

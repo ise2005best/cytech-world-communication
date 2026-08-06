@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../components/button";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Founded in 2003, Cytech World Communication has grown into one of the most trusted names in event production, powering major concerts, festivals, and productions across Nigeria.",
+  alternates: {
+    canonical: "/about-us",
+  },
+};
 
 const featuredEvents = [
   { label: "The Experience 2008 till date", slug: "the-experience" },

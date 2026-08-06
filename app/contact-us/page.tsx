@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Button from "../components/button";
 import ServiceRequestForm from "../components/service-request-form";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Share your event details with Cytech World Communication and our team will review your requirements, recommend the right technical approach, and guide you through the next steps.",
+  alternates: {
+    canonical: "/contact-us",
+  },
+};
 
 const ContactUs = () => {
   return (
