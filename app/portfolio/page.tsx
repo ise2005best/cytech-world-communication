@@ -13,17 +13,17 @@ export const metadata: Metadata = {
 const Portfolio = () => {
   return (
     <div className="bg-[#1E1E1E]">
-      <div className="relative h-[90vh] w-full overflow-hidden rounded-2xl">
+      <div className="relative md:h-[90vh] h-[80vh] w-full overflow-hidden">
         <div
           className="absolute inset-0 grayscale-50 opacity/60 bg-cover bg-center"
           style={{ backgroundImage: "url('/assets/cytech.world2.jpeg')" }}
         />
         <div className="pointer-events-none" />
-        <div className="flex flex-col px-16 absolute bottom-1/4 left-0">
-          <h1 className="md:text-7xl font-4xl font-headings uppercase  font-primary">
+        <div className="flex flex-col px-6 absolute bottom-1/4 left-0">
+          <h1 className="md:text-7xl text-4xl font-headings uppercase  font-primary">
             Behind the stage
           </h1>
-          <p className="font-primary md:text-2xl text-base font-body-wide text-white mt-6 md:mt-12">
+          <p className="font-primary md:text-2xl text-sm font-body-wide text-white mt-6 md:mt-12">
             Explore selected productions powered by Cytech World Communication,
             from major stages to high-scale event experiences. Each project
             reflects the equipment, team, and technical execution behind our
@@ -32,7 +32,7 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="lg:h-1 border-b border-gray-500 border-dashed lg:py-10 " />
-      <div className="flex flex-col h-full justify-center items-start py-12 lg:mx-4  ">
+      <div className="flex flex-col h-full justify-center items-start md:py-12 lg:mx-4  ">
         <PortfolioCarousel />
       </div>
        <div className="lg:h-1 border-b border-gray-500 border-dashed lg:py-10 " />
