@@ -154,7 +154,7 @@ const PortfolioCarousel = () => {
 
   return (
     <div className="w-full">
-      <div className="lg:flex hidden flex-col items-center gap-8 lg:flex-row">
+      <div className="lg:flex hidden flex-col items-center gap-8 lg:flex-row group transition-all duration-300 hover:gap-0">
         <button
           onClick={scrollPrev}
           aria-label="Previous slide"
@@ -171,13 +171,13 @@ const PortfolioCarousel = () => {
             {activeSlide.description}
           </p>
         </div>
-        <div className="relative h-64 w-full overflow-hidden rounded-2xl lg:h-150 lg:w-1/2">
+        <div className="relative h-64 w-full overflow-hidden rounded-2xl lg:h-150 lg:w-1/2 transition-[height] duration-300 group-hover:h-160">
           <Image
             src={activeSlide.src}
             alt={activeSlide.alt}
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
+            className="object-cover  "
           />
         </div>
         <button
@@ -213,7 +213,7 @@ const PortfolioCarousel = () => {
                   </h3>
                 </div>
                 <div className="pointer-events-none absolute inset-x-0 bottom-10 px-6 pb-6 pt-16">
-                  <p className="font-primary text-sm font-light text-white/80 mt-2 line-clamp-3">
+                  <p className="font-primary text-sm font-light text-white/80 mt-2 line-clamp-5">
                     {slide.description}
                   </p>
                 </div>
