@@ -17,8 +17,8 @@ export type CarouselSlide = {
 const defaultSlides: CarouselSlide[] = [
   {
     src: "/assets/carousel-images/the experience_ copy.png",
-    alt: "The Experience 2008/2026",
-    title: "The Experience 2008/2026",
+    alt: "The Experience 2008-2026",
+    title: "The Experience 2008-2026",
     location: "Lagos, Nigeria",
   },
   {
