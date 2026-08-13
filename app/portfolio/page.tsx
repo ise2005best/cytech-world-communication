@@ -19,7 +19,7 @@ const Portfolio = () => {
           style={{ backgroundImage: "url('/assets/cytech.world2.jpeg')" }}
         />
         <div className="pointer-events-none absolute inset-0 bg-radial from-[#9F9F9F]/10 to-[#5E5E5E]" />
-        <div className="flex flex-col px-10 absolute bottom-1/4 left-10">
+        <div className="flex flex-col px-10 absolute bottom-1/4 md:left-10">
           <h1 className="md:text-7xl text-4xl font-headings uppercase text-white  font-primary">
             Behind the stage
           </h1>

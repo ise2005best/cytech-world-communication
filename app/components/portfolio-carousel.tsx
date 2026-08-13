@@ -5,6 +5,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import PortfolioModal from "./portfolio-modal";
 
 type PortfolioSlide = {
   src: string;
@@ -85,6 +86,7 @@ const PortfolioCarousel = () => {
   // Desktop: instant content swap, driven by plain state, navigated via
   // the flanking chevrons.
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [openModal, setOpenModal] = useState(false);
 
   const scrollTo = (index: number) => {
     setSelectedIndex(((index % slides.length) + slides.length) % slides.length);
@@ -193,6 +195,7 @@ const PortfolioCarousel = () => {
         <div
           className="relative h-[50vh] w-full overflow-hidden border-y border-gray-500 border-dashed"
           ref={emblaRef}
+         
         >
           <div className="flex h-full">
             {slides.map((slide) => (
@@ -206,6 +209,7 @@ const PortfolioCarousel = () => {
                   fill
                   sizes="100vw"
                   className="object-cover"
+                  onClick={() => setOpenModal(true)}
                 />
                 <div className="pointer-events-none absolute inset-x-0 top-10 px-6 ">
                   <h3 className="font-primary font-headings uppercase text-2xl font-semibold text-white">
@@ -213,9 +217,15 @@ const PortfolioCarousel = () => {
                   </h3>
                 </div>
                 <div className="pointer-events-none absolute inset-x-0 bottom-10 px-6 pb-6 pt-16">
-                  <p className="font-primary text-sm font-light text-white/80 mt-2 line-clamp-5">
+                  <p className={`font-primary text-sm font-light text-white/80 mt-2 line-clamp-3`}>
                     {slide.description}
                   </p>
+                  <button
+                    className="pointer-events-auto font-primary text-sm font-light text-white/80 mt-2 underline"
+                    onClick={() => setOpenModal(true)}
+                  >
+                    {openModal ? "Show Less" : "Show More"}
+                  </button>
                 </div>
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
                   <div className="hidden max-lg:flex items-center gap-2">
@@ -238,6 +248,13 @@ const PortfolioCarousel = () => {
           </div>
         </div>
       </div>
+      <PortfolioModal
+        isOpen={openModal}
+        onClose={() => setOpenModal(false)}
+        title={slides[mobileSelectedIndex].title}
+        description={slides[mobileSelectedIndex].description}
+        imageUrl={slides[mobileSelectedIndex].src}
+      />
     </div>
   );
 };
