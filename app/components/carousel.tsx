@@ -16,16 +16,16 @@ export type CarouselSlide = {
 
 const defaultSlides: CarouselSlide[] = [
   {
-    src: "/assets/carousel-images/davido@0.5x.png",
-    alt: "Davido Five Tour",
-    title: "Davido 5ive Tour",
-    location: "ENUGU, AKWA-IBOM, YOLA, ABUJA AND IBADAN",
-  },
-  {
     src: "/assets/carousel-images/the experience_ copy.png",
     alt: "The Experience 2008/2026",
     title: "The Experience 2008/2026",
     location: "Lagos, Nigeria",
+  },
+  {
+    src: "/assets/carousel-images/davido@0.5x.png",
+    alt: "Davido Five Tour",
+    title: "Davido 5ive Tour",
+    location: "ENUGU, AKWA-IBOM, YOLA, ABUJA AND IBADAN",
   },
   {
     src: "/assets/carousel-images/vodun days benin.png",
