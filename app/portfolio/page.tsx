@@ -31,7 +31,7 @@ const Portfolio = () => {
           </p>
         </div>
       </div>
-      <div className="lg:h-1 border-b border-gray-500 border-dashed lg:py-3 bg-[#1E1E1E]" />
+      <div className="lg:h-1 border-b border-gray-500 border-dashed bg-[#1E1E1E]" />
       <div className="flex flex-col h-full justify-center items-start md:py-12 lg:mx-4  ">
         <PortfolioCarousel />
       </div>

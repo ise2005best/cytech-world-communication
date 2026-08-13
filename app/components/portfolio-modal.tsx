@@ -31,7 +31,7 @@ const PortfolioModal = ({ isOpen, onClose, description, title, imageUrl }: Portf
         >
           <X size={24} />
         </button>
-        <div className="relative p-6">
+        <div className="relative p-6 pt-14">
           <h3 className="font-primary font-headings uppercase text-2xl font-semibold text-white">
             {title}
           </h3>

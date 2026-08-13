@@ -162,7 +162,7 @@ const PortfolioCarousel = () => {
           aria-label="Previous slide"
           className="flex h-28 w-28 items-center justify-center"
         >
-          <ChevronLeft size={100} strokeWidth={1} />
+          <ChevronLeft size={100} strokeWidth={1} color="white" />
         </button>
 
         <div className="flex flex-col gap-4 lg:w-1/2">
@@ -187,7 +187,7 @@ const PortfolioCarousel = () => {
           aria-label="Next slide"
           className="flex h-28 w-28 items-center justify-center"
         >
-          <ChevronRight size={100} strokeWidth={1} />
+          <ChevronRight size={100} strokeWidth={1} color="white" />
         </button>
       </div>
 
