@@ -31,7 +31,7 @@ const featuredEvents = [
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="bg-[#1E1E1E]">
       <div className="flex flex-col justify-center items-start py-12 md:mt-28 mt-52 mx-6 md:py-32 md:mx-36 max-w-6xl">
         <h3 className="font-primary font-head uppercase text-[32px] md:text-7xl max-w-4xl font-semibold text-white">
           The Engine Behind Every Stage

@@ -25,7 +25,7 @@ const Footer = () => {
 
           <div className="mt-auto flex flex-row gap-5 pt-8">
             <a
-              href="https://www.instagram.com/cytechworldcommunication/"
+              href="https://www.instagram.com/cytech.world?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
             >

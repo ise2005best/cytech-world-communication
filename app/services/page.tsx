@@ -24,8 +24,8 @@ const offerings = [
 
 const Services = () => {
   return (
-    <div>
-      <div className="flex flex-col justify-center items-start py-12 md:mt-28 mt-52 mx-6 md:py-32 md:mx-36 max-w-6xl xl:mx-auto">
+    <div className="bg-[#1E1E1E]">
+      <div className="flex flex-col justify-center items-start py-12 md:mt-28 mt-52 mx-6 md:py-32 md:mx-36 max-w-6xl xl:mx-auto ">
         <h1 className="font-primary font-head uppercase text-[32px] md:text-7xl max-w-4xl font-semibold text-white">
           premium production
         </h1>
@@ -66,7 +66,7 @@ const Services = () => {
           <div className="flex flex-col gap-4">
             {offerings.map((offering) => (
               <div key={offering} className="flex flex-row items-center gap-1">
-                <X className="md:w-8 md:h-8 w-6 h-6"  />
+                <X className="md:w-8 md:h-8 w-6 h-6 text-white"  />
                 <p className="font-primary font-body-wider md:text-2xl text-base text-white">
                   {offering}
                 </p>
